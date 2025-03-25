@@ -1,0 +1,24 @@
+{
+    "name": "aifaiz/simple-table",
+    "description": "A simple, extendable table component for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Faiz",
+            "email": "your@email.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Aifaiz\\SimpleTable\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aifaiz\\SimpleTable\\SimpleTableServiceProvider"
+            ]
+        }
+    }
+}
