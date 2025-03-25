@@ -46,3 +46,16 @@ you can publish views if you need to further customize your eloquent table
 ````
 php artisan vendor:publish --tag=simple-table-views
 ````
+
+## Usage
+
+Use the blade table component in any views
+
+````
+<x-simple-table 
+    model="App\Models\Order"
+    :columns="['id', 'customer_name', 'total_amount', 'status']"
+    queryClass="App\Tables\OrderTableQuery"
+/>
+
+````
