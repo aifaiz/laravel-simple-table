@@ -41,7 +41,7 @@ composer require aifaiz/simple-table
 ````
 
 ## Publish Views (optional)
-you can publish views if you need to further customize your eloquent table
+you can publish views if you need to further customize your eloquent table or table styling. this will publish view file to `views/vendor/simple-table/table.blade.php`
 
 ````
 php artisan vendor:publish --tag=simple-table-views
