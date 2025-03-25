@@ -1,6 +1,8 @@
+`status`: havent publish to packagist. this is still in testing
+
 # Laravel Simple Table
 
-This library will display a table with features: 
+This library will display a table with default features: 
 
 1. Searching columns
 2. Filtering columns
@@ -35,6 +37,24 @@ aifaiz/simple-table
 ````
 
 ## Installation
+havent published to packagist yet. so you need to modify the `composer.json` file with this
+
+````
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/aifaiz/laravel-simple-table"
+        }
+    ],
+    "require": {
+        "aifaiz/laravel-simple-table": "dev-main"
+    }
+}
+
+````
+
+Then run 
 
 ````
 composer require aifaiz/simple-table
