@@ -8,9 +8,13 @@ This library will display a table with features:
 ## Features
 
 ✅ Lightweight & Efficient – Only uses Blade, no Livewire/JS overhead.
+
 ✅ Extendable – Users can override query logic via SimpleTableQuery.
+
 ✅ Easy to Use – Works with any Eloquent model.
+
 ✅ Built-in Sorting & Searching – Without extra dependencies.
+
 ✅ Customizable View – Users can override the Blade template.
 
 ## Structure
