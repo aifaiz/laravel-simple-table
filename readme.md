@@ -47,6 +47,31 @@ you can publish views if you need to further customize your eloquent table
 php artisan vendor:publish --tag=simple-table-views
 ````
 
+## Modify Eloquent query for the table
+
+you can extend the functionality/query of the table by extending the `SimpleTableQuery`
+
+````
+namespace App\Tables;
+
+use Aifaiz\SimpleTable\Base\SimpleTableQuery;
+use Illuminate\Http\Request;
+
+class OrderTableQuery extends SimpleTableQuery
+{
+    public function applyFilters(Request $request): \Illuminate\Database\Eloquent\Builder
+    {
+        $query = parent::applyFilters($request);
+
+        if ($request->has('status')) {
+            $query->where('status', $request->status);
+        }
+
+        return $query;
+    }
+}
+````
+
 ## Usage
 
 Use the blade table component in any views
