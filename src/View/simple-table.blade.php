@@ -8,6 +8,12 @@
                     </a>
                 </th>
             @endforeach
+            
+            @if ($extraColumn)
+                <th class="border border-gray-300 px-4 py-2">
+                    {{ $extraColumn }}
+                </th>
+            @endif
         </tr>
     </thead>
     <tbody>
@@ -18,6 +24,16 @@
                         {{ $row->$column }}
                     </td>
                 @endforeach
+                
+                @if ($actionColumn)
+                    <td class="border border-gray-300 px-4 py-2">
+                        @if (View::exists('simple-table::action-column'))
+                            @include('simple-table::action-column', ['row' => $row])
+                        @else
+                            -
+                        @endif
+                    </td>
+                @endif
             </tr>
         @endforeach
     </tbody>

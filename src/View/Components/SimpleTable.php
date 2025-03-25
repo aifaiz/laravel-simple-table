@@ -12,8 +12,9 @@ class SimpleTable extends Component
     public $columns;
     public $data;
     public $queryClass;
+    public $actionColumn;
 
-    public function __construct(string $model, array $columns, string $queryClass = null, Request $request)
+    public function __construct(string $model, array $columns, string $queryClass = null, string $actionColumn = null, Request $request)
     {
         if (!class_exists($model) || !is_subclass_of($model, Model::class)) {
             throw new \Exception("Invalid model: $model");
@@ -42,6 +43,7 @@ class SimpleTable extends Component
 
         $this->data = $query->paginate(50);
         $this->columns = $columns;
+        $this->actionColumn = $actionColumn;
     }
 
     public function render()

@@ -84,3 +84,25 @@ Use the blade table component in any views
 />
 
 ````
+
+## Action Column
+
+create a `action-column.blade.php` file in `views/vendor/simple-table/` then the table will display the action column. the content of the view like this:
+
+````
+<a href="#{{ $row->id }}" class="px-2 py-1 bg-blue-500 text-white rounded">View</a>
+<a href="#{{ $row->id }}" class="px-2 py-1 bg-red-500 text-white rounded">Delete</a>
+
+````
+
+Then `$row->id` can be accessed from the row data
+
+## Final component use for extra column
+
+````
+<x-simple-table 
+    model="App\Models\Order"
+    :columns="['id', 'name', 'email', 'date_registered']"
+    actionColumn="Actions"
+/>
+````
